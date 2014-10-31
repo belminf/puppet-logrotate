@@ -25,6 +25,7 @@ define logrotate::rule(
     $create_mode = 0600,
     $create_owner = 'root',
     $create_group = 'root',
+	$dateext = true,
     $ifempty  = false,
     $missingok  = true,
     $sharedscripts  = true,
