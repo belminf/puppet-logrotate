@@ -1,0 +1,29 @@
+# Managed by Class['logrotate']
+# Pushed by <%= @servername %>
+#
+# WARNING: Will be overwritten if changed
+
+<%= @log_path %> {
+	<%= @condition %>
+	rotate <%= @keep_count %>
+	create <%= @create_owner %> <%= @create_group %> <%= @create_mode %>
+<% if not @ifempty -%>
+	notifempty
+<% end -%>
+<% if @missingok -%>
+	missingok
+<% end -%>
+<% if @sharedscripts -%>
+	sharedscripts
+<% end -%>
+<% if @prerotate -%>
+	prerotate
+	<%= @prerorate %>
+	endscript
+<% end -%>
+<% if @postrotate -%>
+	postrotate
+	<%= @postrotate %>
+	endscript
+<% end -%>
+}
