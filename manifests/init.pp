@@ -19,7 +19,7 @@ class logrotate::base {
 
 define logrotate::rule(
     $log_path,
-    $condition = 'daily',
+    $condition = 'weekly',
     $keep_count  = 4,
     $compress = true,
     $create_mode = 0600,
