@@ -6,7 +6,7 @@
 <%= @log_path %> {
 	<%= @condition %>
 	rotate <%= @keep_count %>
-	create <%= @create_owner %> <%= @create_group %> <%= @create_mode %>
+	create <%= @create_mode %> <%= @create_owner %> <%= @create_group %>
 <% if not @ifempty -%>
 	notifempty
 <% end -%>
